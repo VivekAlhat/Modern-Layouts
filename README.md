@@ -1,2 +1,2 @@
-# Complex-Layouts
-My learnings from creating complex layouts using CSS
+# Modern-Layouts
+My learnings from creating modern layouts using CSS
