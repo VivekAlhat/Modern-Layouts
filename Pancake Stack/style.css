@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 24px;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 2px;
+  grid-template-areas:
+    "nav nav nav nav"
+    "main main main main"
+    "main main main main"
+    "footer footer footer footer";
+  text-align: center;
+}
+
+nav {
+  background-color: #00425a;
+  color: #fff;
+  grid-area: nav;
+}
+
+main {
+  background-color: #bfdb38;
+  grid-area: main;
+}
+
+footer {
+  background-color: #fc7300;
+  grid-area: footer;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 3fr 0.2fr;
+    grid-template-areas:
+      "nav"
+      "main"
+      "footer";
+  }
+}
